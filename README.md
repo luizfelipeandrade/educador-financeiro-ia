@@ -1,75 +1,72 @@
-# React + TypeScript + Vite
+# 💰 Educador Financeiro IA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web que analisa uma simulação financeira e gera um diagnóstico personalizado usando Inteligência Artificial Generativa (Google Gemini).
 
-Currently, two official plugins are available:
+Projeto desenvolvido como exercício da plataforma [DIO](https://www.dio.me/), unindo boas práticas de Front-End com integração de IA.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Funcionalidades
 
-## React Compiler
+- **Formulário em etapas**: coleta de renda, gastos, dívidas, reserva de emergência e objetivos financeiros
+- **Validação por etapa**: impede avançar sem preencher os campos necessários
+- **Tema claro/escuro**: alternância de tema com Context API
+- **Persistência no navegador**: os dados não se perdem ao recarregar a página (localStorage)
+- **Diagnóstico com IA**: integração com a API do Google Gemini, que analisa os dados e retorna:
+  - Diagnóstico geral da situação financeira
+  - Pontos fortes
+  - Pontos de atenção
+  - Recomendações práticas
+  - Próximos passos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias utilizadas
 
-## Expanding the ESLint configuration
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Google Gemini API](https://ai.google.dev/)
+- Context API (tema claro/escuro)
+- localStorage (persistência)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Como rodar o projeto localmente
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [Node.js](https://nodejs.org/) instalado (versão LTS recomendada)
+- Uma chave de API do Google Gemini, obtida em [Google AI Studio](https://aistudio.google.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Passo a passo
 
+1. Clone o repositório:
+```bash
+git clone https://github.com/luizfelipeandrade/educador-financeiro-ia
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+2. Entre na pasta do projeto:
+```bash
+cd educador-financeiro-ia
 ```
+
+3. Instale as dependências:
+```bash
+npm install
+```
+
+4. Crie um arquivo `.env` na raiz do projeto com sua chave da API: VITE_GEMINI_API_KEY=sua_chave_aqui
+
+5. Rode o projeto:
+```bash
+npm run dev
+```
+
+6. Acesse o endereço mostrado no terminal (geralmente `http://localhost:5173`)
+
+## ⚠️ Aviso de segurança
+
+Este projeto chama a API do Gemini diretamente do navegador, o que expõe a chave da API no código do cliente. Essa abordagem é adequada para fins de **aprendizado e portfólio**, mas não é recomendada para aplicações em produção — nesses casos, a chamada deveria passar por um backend/servidor que protege a chave.
+
+## 📌 Status
+
+Projeto funcional e completo, desenvolvido como exercício de estudo (DIO).
+
+## 👤 Autor
+
+Luiz Felipe
