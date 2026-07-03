@@ -1,0 +1,52 @@
+:root {
+  --verde-escuro: #0f3d3a;
+  --verde-medio: #1f6f5c;
+  --dourado: #c9a227;
+  --bg-claro: #f7f6f2;
+  --card-claro: #ffffff;
+  --texto-claro: #1c2b2a;
+  --texto-claro-suave: #5a6b69;
+  --borda-claro: #e0ddd3;
+
+  --bg-escuro: #0d1614;
+  --card-escuro: #16211f;
+  --texto-escuro: #eef1ef;
+  --texto-escuro-suave: #9fb0ae;
+  --borda-escuro: #2a3836;
+
+  --fonte-titulo: "Fraunces", Georgia, serif;
+  --fonte-corpo: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-corpo);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100svh;
+}
+
+body.tema-claro {
+  background-color: var(--bg-claro);
+  color: var(--texto-claro);
+}
+
+body.tema-escuro {
+  background-color: var(--bg-escuro);
+  color: var(--texto-escuro);
+}
+
+h1, h2 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+#root {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}

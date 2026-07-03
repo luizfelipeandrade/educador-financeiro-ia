@@ -1,0 +1,250 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app h1 {
+  font-size: 2.25rem;
+  margin: 0.5rem 0 0;
+}
+
+.botao-tema {
+  align-self: flex-start;
+  background: none;
+  border: 1px solid var(--borda-claro);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-family: var(--fonte-corpo);
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+body.tema-escuro .botao-tema {
+  border-color: var(--borda-escuro);
+}
+
+.formulario-container {
+  background: var(--card-claro);
+  border: 1px solid var(--borda-claro);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(15, 61, 58, 0.06);
+}
+
+body.tema-escuro .formulario-container {
+  background: var(--card-escuro);
+  border-color: var(--borda-escuro);
+  box-shadow: none;
+}
+
+.progresso {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--texto-claro-suave);
+  margin: 0 0 1.5rem;
+}
+
+body.tema-escuro .progresso {
+  color: var(--texto-escuro-suave);
+}
+
+.etapa h2 {
+  font-size: 1.4rem;
+  margin: 0 0 0.4rem;
+}
+
+.etapa-descricao {
+  color: var(--texto-claro-suave);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+body.tema-escuro .etapa-descricao {
+  color: var(--texto-escuro-suave);
+}
+
+.etapa label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 1.1rem 0 0.4rem;
+}
+
+.etapa input,
+.etapa select {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--borda-claro);
+  background: var(--bg-claro);
+  color: var(--texto-claro);
+  font-family: var(--fonte-corpo);
+  font-size: 1rem;
+}
+
+body.tema-escuro .etapa input,
+body.tema-escuro .etapa select {
+  border-color: var(--borda-escuro);
+  background: var(--bg-escuro);
+  color: var(--texto-escuro);
+}
+
+.etapa input:focus,
+.etapa select:focus {
+  outline: none;
+  border-color: var(--verde-medio);
+  box-shadow: 0 0 0 3px rgba(31, 111, 92, 0.15);
+}
+
+.lista-revisao {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lista-revisao li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--borda-claro);
+  font-size: 0.95rem;
+}
+
+body.tema-escuro .lista-revisao li {
+  border-color: var(--borda-escuro);
+}
+
+.botoes-navegacao {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.botoes-navegacao button {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--fonte-corpo);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.botoes-navegacao button:last-child {
+  background: var(--verde-medio);
+  color: #fff;
+}
+
+.botoes-navegacao button:first-child:not(:last-child) {
+  background: transparent;
+  border: 1px solid var(--borda-claro);
+  color: inherit;
+}
+
+body.tema-escuro .botoes-navegacao button:first-child:not(:last-child) {
+  border-color: var(--borda-escuro);
+}
+
+.app h1 {
+  text-align: center;
+}
+
+.mensagem-erro {
+  background: rgba(200, 60, 60, 0.1);
+  color: #c83c3c;
+  border: 1px solid rgba(200, 60, 60, 0.3);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.resultado h2 {
+  text-align: center;
+}
+
+.diagnostico-texto {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 1rem 0 2rem;
+  color: var(--texto-claro-suave);
+}
+
+body.tema-escuro .diagnostico-texto {
+  color: var(--texto-escuro-suave);
+}
+
+.secao-resultado {
+  margin-bottom: 1.5rem;
+}
+
+.secao-resultado h3 {
+  font-size: 1rem;
+  font-family: var(--fonte-corpo);
+  font-weight: 600;
+  margin: 0 0 0.6rem;
+}
+
+.secao-resultado ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.secao-positivo h3 {
+  color: var(--verde-medio);
+}
+
+.secao-atencao h3 {
+  color: var(--dourado);
+}
+
+.botao-reiniciar {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--verde-medio);
+  color: #fff;
+  font-family: var(--fonte-corpo);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.conteudo-carregando {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: girar 0.6s linear infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
